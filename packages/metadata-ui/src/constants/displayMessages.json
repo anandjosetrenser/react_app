@@ -1,0 +1,14 @@
+{
+  "metadataViewer": "Metadata Viewer",
+  "errors": {
+    "unknownError": "An error occurred during the process. Please try again later.",
+    "noErrors": "No error."
+  },
+  "common": {
+    "signOut": "Sign out",
+    "noRecordsFound": "No record found."
+  },
+  "pageHeading": {
+    "studyList": "Study List"
+  }
+}
