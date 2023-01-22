@@ -1,0 +1,3 @@
+[submodule "packages/tsdx_library"]
+	path = packages/tsdx_library
+	url = https://github.com/anandjosetrenser/tsdx_library
