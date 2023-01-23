@@ -1,4 +1,7 @@
 import _ from 'lodash'
+import { KebabMenu } from 'tsdx-1'
+
+import { FaExpand } from '../../assets/icons/svgComponents'
 
 import { formatStudyDate } from './dataFormatFunctions'
 import { StudyDataResponse, TableSchema } from './interface'
@@ -62,18 +65,16 @@ const studyListSchema: TableSchema[] = [
     isSortable: false,
     dataFormatFunction: (rowData: unknown, actionFunction?: Function) => {
       const studyData = rowData as StudyDataResponse
+      const menuItems: { icon: JSX.Element; label: string }[] = [{ label: 'View', icon: <FaExpand /> }]
       return (
         <>
-          <span
-            style={{ cursor: 'pointer', color: 'blue' }}
-            onClick={() => {
-              if (actionFunction != null) {
-                actionFunction('showHeader', studyData)
-              }
-            }}
-          >
-            View
-          </span>
+          <KebabMenu
+            data={studyData}
+            menuOptions={menuItems}
+            selectedId=""
+            isSelected={false}
+            actionFunction={actionFunction}
+          />
         </>
       )
     }

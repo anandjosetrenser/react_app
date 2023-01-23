@@ -334,14 +334,14 @@ export default async function fetchStudyList(queryParam: Record<string, any>) {
         .setQueryParam(queryParam)
         .get()
         .then(studyList => {
-          metadataAPI
-            .request('metadata/instance/count')
-            .setQueryParam(queryParam)
-            .get()
-            .then(countInfo => {
-              resolve({ data: studyList, count: countInfo.count })
-            })
-            .catch(() => {})
+          // metadataAPI
+          //   .request('metadata/instance/count')
+          //   .setQueryParam(queryParam)
+          //   .get()
+          //   .then(countInfo => {
+              resolve({ data: studyList, count: 10 })
+            // })
+            // .catch(() => {})
         })
         .catch(() => {})
       //   resolve({data: studyList })
